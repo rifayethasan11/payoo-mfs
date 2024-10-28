@@ -19,7 +19,7 @@
 
                 <!-- available balance -->
                  <div>
-                    <div class="stats shadow">
+                    <div class="shadow stats">
                         <div class="stat">
                           <div class="stat-value">89400</div>
                           <div class="stat-desc">Available Balance</div>
@@ -34,22 +34,22 @@
                  </div>
                  <div class="divider"></div>
                  <!-- add money form start -->
-                 <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                 <div class="w-full max-w-sm shadow-2xl card bg-base-100 shrink-0">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text">Amount</span>
                         </label>
-                        <input type="text" placeholder="Enter Your Amount" class="input input-bordered" required />
+                        <input id="input-add-money" type="text" placeholder="Enter Your Amount" class="input input-bordered" required />
                       </div>
                       <div class="form-control">
                         <label class="label">
-                          <span class="label-text">Password</span>
+                          <span class="label-text">Pin</span>
                         </label>
-                        <input type="password" placeholder="password" class="input input-bordered" autocomplete="off" required />
+                        <input id="input-pin-number" type="password" placeholder="Enter Your Pin" class="input input-bordered" autocomplete="off" required />
                       </div>
-                      <div class="form-control mt-6">
-                        <button class="btn btn-primary">Add Money</button>
+                      <div class="mt-6 form-control">
+                        <button id="btn-add-money" class="btn btn-primary">Add Money</button>
                       </div>
                     </form>
                   </div>
