@@ -1,32 +1,26 @@
-document.getElementById('btn-cashout').addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('cash out button clicked');
+document.getElementById('btn-cash-out')
+    .addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log('cash out button clicked')
 
-    const cashOut = document.getElementById('input-add-money').value;
-    const pinNumber = document.getElementById('input-pin-number').value;
-
-    console.log(cashOut, pinNumber);
-
-    if(pinNumber === '1234'){
-        console.log('money is reducing');
-
-        
-        const balance = document.getElementById('account-balance').innerText;
-
-        const balanceNumber = parseFloat(balance);
+        const cashOut = document.getElementById('input-cash-out').value;
         const cashOutNumber = parseFloat(cashOut);
+        const pinNumber = document.getElementById('input-cash-out-pin').value;
 
-        // reduce the balance
-        const newBalance = balanceNumber - cashOutNumber;
+        console.log(cashOut, pinNumber);
+        // wrong way to verify pin number
+        if(pinNumber === '1234'){
+            const balance = document.getElementById('account-balance').innerText;
+            const balanceNumber = parseFloat(balance);
 
-        // update the UI
-        document.getElementById('account-balance').innerText = newBalance;
-        
+            // reduce the balance
+            const newBalance = balanceNumber - cashOutNumber;
 
-    }
-    else{
-        alert('Failed to cash out! please try again later');
-    }
+            // update the ui
+            document.getElementById('account-balance').innerText = newBalance;
 
-
-})
+        }
+        else {
+            alert('Failed to cash out. Please try again later.')
+        }
+    });
