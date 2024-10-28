@@ -1,3 +1,5 @@
+// will not work
+
 // show the cash out form
 document.getElementById('btn-show-cash-out')
     .addEventListener('click', function () {
